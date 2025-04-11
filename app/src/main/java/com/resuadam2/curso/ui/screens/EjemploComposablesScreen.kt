@@ -16,7 +16,6 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -27,13 +26,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import java.nio.file.WatchEvent
 
 val names = listOf("Android", "Compose", "Jetpack", "Kotlin", "Studio")
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen() {
+fun EjemploComposablesScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -101,7 +99,7 @@ fun Greeting(name: String) {
 @Preview(showSystemUi = true)
 @Composable
 fun MainScreenPreview() {
-    MainScreen()
+    EjemploComposablesScreen()
 }
 
 /**
@@ -114,5 +112,5 @@ fun MainScreenPreview() {
 )
 @Composable
 fun MainScreenPreviewDark() {
-    MainScreen()
+    EjemploComposablesScreen()
 }

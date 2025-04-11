@@ -123,13 +123,20 @@ fun ContadorIndividualAvanzado(
         Row {
             Button(
                 onClick = {
-                    if(incremento.isBlank() || incremento.toInt() <= 0) {
+                    try {
+                        if(incremento.isBlank() || incremento.toInt() <= 0) {
+                            Toast.makeText(context,
+                                "El incremento debe ser un número positivo",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            onIncrementar()
+                        }
+                    } catch (e: NumberFormatException) {
                         Toast.makeText(context,
                             "El incremento debe ser un número positivo",
                             Toast.LENGTH_SHORT
                         ).show()
-                    } else {
-                        onIncrementar()
                     }
                     focusManager.clearFocus()
                 }
