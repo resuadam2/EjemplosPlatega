@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.resuadam2.curso.ui.screens.ContadorScreen
+import com.resuadam2.curso.ui.screens.ContadoresAvanzadosScreen
 import com.resuadam2.curso.ui.screens.MainScreen
 import com.resuadam2.curso.ui.theme.CursoTheme
 
@@ -15,7 +16,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
         CursoTheme {
-                ContadorScreen()
+                ContadoresAvanzadosScreen()
             }
         }
     }
