@@ -7,6 +7,7 @@ enum class AppScreens {
     VariosContadoresScreen,
     ContadoresAvanzadosScreen,
     ParametrosScreen,
+    ListaScreen,
 }
 
 /*

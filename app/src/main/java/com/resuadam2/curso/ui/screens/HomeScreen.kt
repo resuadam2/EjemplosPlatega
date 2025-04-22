@@ -38,6 +38,7 @@ fun HomeScreen(
     onNavigateToContadoresAvanzados: () -> Unit,
     onNavigateToParametros: () -> Unit,
     onNavigateToParametrosConParam: (String) -> Unit,
+    onNavigateToListaScreen: () -> Unit,
 ) {
     Column (
         modifier = Modifier.fillMaxSize(),
@@ -98,6 +99,12 @@ fun HomeScreen(
                 Text(text = "Ejemplo Parametros con param")
             }
         }
+        Button(
+            onClick = onNavigateToListaScreen,
+            modifier = Modifier.padding(bottom = 16.dp)
+        ) {
+            Text(text = "Ejemplo Lista Screen")
+        }
     }
 }
 
@@ -105,6 +112,7 @@ fun HomeScreen(
 @Composable
 fun HomeScreenPreview() {
     HomeScreen(
+        {},
         {},
         {},
         {},

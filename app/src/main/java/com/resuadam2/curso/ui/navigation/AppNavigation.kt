@@ -10,6 +10,7 @@ import com.resuadam2.curso.ui.screens.ContadorScreen
 import com.resuadam2.curso.ui.screens.ContadoresAvanzadosScreen
 import com.resuadam2.curso.ui.screens.EjemploComposablesScreen
 import com.resuadam2.curso.ui.screens.HomeScreen
+import com.resuadam2.curso.ui.screens.ListaScreen
 import com.resuadam2.curso.ui.screens.ParametrosScreen
 import com.resuadam2.curso.ui.screens.VariosScreen
 
@@ -40,6 +41,9 @@ fun AppNavigation() {
                 },
                 onNavigateToParametrosConParam = { param ->
                     navController.navigate(AppScreens.ParametrosScreen.name + "/$param")
+                },
+                onNavigateToListaScreen = {
+                    navController.navigate(AppScreens.ListaScreen.name)
                 }
             )
         }
@@ -64,6 +68,9 @@ fun AppNavigation() {
         ) {
             val param = it.arguments?.getString("param")
             ParametrosScreen(param = param ?: "Sin Parametro")
+        }
+        composable(route = AppScreens.ListaScreen.name) {
+            ListaScreen()
         }
     }
 }
