@@ -13,6 +13,13 @@ navigationCompose = "2.8.9"
 lifecycleViewmodel = "2.9.0-beta01"
 lifecycleViewmodelComposeAndroid = "2.9.0-beta01"
 lifecycleViewmodelComposeAndroidVersion = "2.9.0-rc01"
+androidxRoomGradlePlugin = "2.7.1"
+roomCommon = "2.7.1"
+roomKtx = "2.7.1"
+runtime = "1.1.1"
+compiler = "1.1.1"
+roomCompiler = "2.7.1"
+navigationComposeVersion = "2.9.0-rc01"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +41,13 @@ androidx-media3-common-ktx = { group = "androidx.media3", name = "media3-common-
 androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycleViewmodel" }
 androidx-lifecycle-viewmodel-compose-android = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose-android", version.ref = "lifecycleViewmodelComposeAndroid" }
 lifecycle-viewmodel-compose-android = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose-android", version.ref = "lifecycleViewmodelComposeAndroidVersion" }
+androidx-androidx-room-gradle-plugin = { group = "androidx.room", name = "androidx.room.gradle.plugin", version.ref = "androidxRoomGradlePlugin" }
+androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
+runtime = { group = "android.arch.persistence.room", name = "runtime", version.ref = "runtime" }
+compiler = { group = "android.arch.persistence.room", name = "compiler", version.ref = "compiler" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompiler" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationComposeVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/ejemplomvvm" />
             <option value="$PROJECT_DIR$/listamvvm" />
+            <option value="$PROJECT_DIR$/listaroom" />
           </set>
         </option>
       </GradleProjectSettings>
