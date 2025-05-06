@@ -58,16 +58,18 @@ class ListaScreenViewModelHibrido : ViewModel() {
     fun onTituloChange(titulo: String) {
         uiState = uiState.copy(titulo = titulo)
         checkAddEnabled()
+        checkEditEnabled()
     }
 
     fun onDescripcionChange(descripcion: String) {
         uiState = uiState.copy(descripcion = descripcion)
         checkAddEnabled()
+        checkEditEnabled()
     }
 
     fun checkAddEnabled() {
         uiState = uiState.copy(
-            addEnabled = uiState.titulo.isNotBlank() && uiState.descripcion.isNotBlank()
+            addEnabled = uiState.titulo.isNotBlank() && uiState.descripcion.isNotBlank() && !uiState.editEnabled,
         )
     }
 
@@ -102,10 +104,22 @@ class ListaScreenViewModelHibrido : ViewModel() {
         )
     }
 
-    fun editarTarea() {
+    fun editTarea() {
         _list[_list.indexOf(uiState.tareaSeleccionada)] = uiState.tareaSeleccionada!!.copy(
             titulo = uiState.titulo,
             descripcion = uiState.descripcion,
+        )
+        uiState = uiState.copy(
+            titulo = "",
+            descripcion = "",
+            editEnabled = false,
+            tareaSeleccionada = null
+        )
+    }
+
+    fun checkEditEnabled() {
+        uiState = uiState.copy(
+            editEnabled = uiState.titulo.isNotBlank() && uiState.descripcion.isNotBlank() && uiState.tareaSeleccionada != null,
         )
     }
 
