@@ -3,6 +3,7 @@ package com.resuadam2.listaroom.ui.home
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -13,6 +14,7 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.Star
+import androidx.compose.material.icons.twotone.Star
 import androidx.compose.material3.BasicAlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
@@ -101,14 +103,19 @@ fun HomeBody(
 ) {
     if (peliculas.isEmpty()) {
         Column(
-            modifier = modifier,
+            modifier = modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
             Text("Todavía no hay películas añadidas")
         }
     } else {
-        LazyColumn {
+        LazyColumn(
+            modifier = modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        )
+        {
             items(peliculas) {
                 PeliculaItem(
                     pelicula = it,
@@ -133,7 +140,7 @@ fun PeliculaItem(
         Row {
             for (i in 1..5) {
                 Icon(
-                    imageVector = if (i <= pelicula.valoracion) Icons.Filled.Star else Icons.Outlined.Star, // Icons.TwoTone.Star,
+                    imageVector = if (i <= pelicula.valoracion) Icons.Filled.Star else Icons.TwoTone.Star,
                     contentDescription = "valoracion",
                 )
             }

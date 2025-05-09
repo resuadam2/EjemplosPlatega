@@ -8,4 +8,11 @@
     <string name="delete_title">borrando</string>
     <string name="cancel">CANCELAR</string>
     <string name="delete">BORRAR</string>
+    <string name="add_button">AÑADIR</string>
+    <string name="titulo">Título</string>
+    <string name="anio">Publicación</string>
+    <string name="genero">Género</string>
+    <string name="duracion">Duración</string>
+    <string name="valoracion">Valoración</string>
+    <string name="star_description">estrella</string>
 </resources>

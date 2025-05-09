@@ -8,7 +8,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.resuadam2.listaroom.ui.add.AddDestination
+import com.resuadam2.listaroom.ui.add.AddScreen
 import com.resuadam2.listaroom.ui.detail.DetailDestination
+import com.resuadam2.listaroom.ui.detail.DetailScreen
 import com.resuadam2.listaroom.ui.edit.EditDestination
 import com.resuadam2.listaroom.ui.home.HomeDestination
 import com.resuadam2.listaroom.ui.home.HomeScreen
@@ -36,7 +38,11 @@ fun AppNavHost(
             )
         }
         composable(AddDestination.route) {
-            // AddScreen()
+            AddScreen(
+                onNavigateBack = {
+                    navController.navigate(HomeDestination.route)
+                },
+            )
         }
         composable(
             route = DetailDestination.routeWithArgs,
@@ -44,7 +50,11 @@ fun AppNavHost(
                 type = NavType.IntType
             })
         ) {
-            // DetailScreen()
+            DetailScreen(
+                onNavigateBack = {
+                    navController.navigate(HomeDestination.route)
+                },
+            )
         }
         composable(
             route = EditDestination.routeWithArgs,
