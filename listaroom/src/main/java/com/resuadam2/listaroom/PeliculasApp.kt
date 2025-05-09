@@ -17,10 +17,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 
 import com.resuadam2.listaroom.R.string
+import com.resuadam2.listaroom.ui.navigation.AppNavHost
 
 @Composable
 fun ListaPeliculasApp(navController: NavHostController = rememberNavController()) {
-    // AppNavHost(navController = navController)
+    AppNavHost(navController = navController)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

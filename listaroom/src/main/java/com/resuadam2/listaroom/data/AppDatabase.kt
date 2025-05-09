@@ -20,8 +20,7 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "pelicula_database"
-                ).build()
-                INSTANCE ?: getDatabase(context).also {
+                ).build().also {
                     INSTANCE = it
                 }
                 instance

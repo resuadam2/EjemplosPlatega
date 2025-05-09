@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">listapeliculasroom</string>
     <string name="back_button">back</string>
+    <string name="add_title">Add Movie</string>
+    <string name="detail_title">Movie Details</string>
+    <string name="edit_title">Edit Movie</string>
+    <string name="agregar_pelicula">Agregar pelicula</string>
+    <string name="delete_title">borrando</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="delete">BORRAR</string>
 </resources>
